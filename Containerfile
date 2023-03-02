@@ -5,7 +5,7 @@ LABEL com.github.containers.toolbox="true" \
       summary="ArchLinux image with a bling" \
       maintainer="yukidream"
 
-RUN   pacman -Syu --no-confirm htop neofetch
+RUN   pacman -Syu --noconfirm htop neofetch
 
 RUN   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
