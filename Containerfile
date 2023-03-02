@@ -39,8 +39,7 @@ RUN git config --global protocol.file.allow always && \
     nvidia-utils\
     mesa-utils\
     --noconfirm
-    
-     
+
 USER root
 WORKDIR /
 
@@ -56,6 +55,6 @@ RUN userdel -r build && \
     rm -drf /home/build && \
     sed -i '/build ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers && \
     sed -i '/root ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers && \
-    rm -rf /tmp/* &&
+    rm -rf /tmp/* 
 
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
