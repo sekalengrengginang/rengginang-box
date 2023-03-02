@@ -30,9 +30,9 @@ RUN git config --global protocol.file.allow always && \
     cd .. && \
     rm -drf paru-bin 
 
-COPY extra-packages /
+COPY extra-packages /home/build/
 RUN paru -S --noconfirm - < extra-packages
-RUN rm /extra-packages
+RUN rm /home/build/extra-packages
 
 USER root
 WORKDIR /
