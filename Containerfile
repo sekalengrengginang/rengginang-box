@@ -28,12 +28,19 @@ RUN git config --global protocol.file.allow always && \
     cd paru-bin && \
     makepkg -si --noconfirm && \
     cd .. && \
-    rm -drf paru-bin 
-
-COPY extra-packages /home/build/extra-packages
-RUN paru -S --noconfirm - < extra-packages
-RUN rm /home/build/extra-packages
-
+    rm -drf paru-bin && \
+    paru -S neofetch\
+    htop\
+    nvtop\
+    starship\
+    yt-dlp\
+    ffmpeg\
+    ani-cli\
+    nvidia-utils\
+    mesa-utils\
+    --noconfirm
+    
+     
 USER root
 WORKDIR /
 
