@@ -11,6 +11,9 @@ RUN sed -i 's/#Color/Color/g' /etc/pacman.conf && \
     sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makepkg.conf && \
     pacman -Syu --noconfirm 
 
+# install git and base-devel
+RUN pacman -S --noconfirm base-devel git
+
 # Create build user
 RUN useradd -m --shell=/bin/bash build && usermod -L build && \
     echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
@@ -33,7 +36,6 @@ RUN git config --global protocol.file.allow always && \
       ffmpeg\
       ani-cli\
       --noconfirm
-
 USER root
 WORKDIR /
 
