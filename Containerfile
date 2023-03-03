@@ -49,12 +49,13 @@ RUN ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree 
 
 # Cleanup
-RUN pacman -Scc --noconfirm
+RUN pacman -Scc --noconfirm 
 
 RUN userdel -r build && \
     rm -drf /home/build && \
     sed -i '/build ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers && \
     sed -i '/root ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers && \
-    rm -rf /tmp/* 
+    rm -rf /tmp/* && \
+    rm -rf /var/cache/pacman/pkg/*
 
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
