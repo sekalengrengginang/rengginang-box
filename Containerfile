@@ -36,8 +36,9 @@ RUN git config --global protocol.file.allow always && \
     yt-dlp\
     ffmpeg\
     ani-cli\
-    nvidia-utils\
-    mesa-utils\
+    nodejs\
+    visual-studio-code-bin\
+    chromium\
     --noconfirm
 
 USER root
