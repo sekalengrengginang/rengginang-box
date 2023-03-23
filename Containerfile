@@ -1,9 +1,9 @@
-FROM docker.io/archlinux/archlinux:latest
+FROM docker.io/archlinux/archlinux:base-devel
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="ArchLinux image with my personal package selection" \
-      maintainer="yukidream"
+      maintainer="yukidream@mashirokuratamorfo@gmail.com"
 
 # Pacman Initialization
 RUN sed -i 's/#Color/Color/g' /etc/pacman.conf && \
@@ -31,12 +31,15 @@ RUN git config --global protocol.file.allow always && \
     rm -drf paru-bin && \
     paru -S neofetch\
     htop\
+    exa\
+    bat\
     nvtop\
     starship\
     yt-dlp\
     ffmpeg\
     ani-cli\
     nodejs\
+    npm\
     visual-studio-code-bin\
     chromium\
     --noconfirm
