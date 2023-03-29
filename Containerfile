@@ -40,6 +40,7 @@ RUN git config --global protocol.file.allow always && \
     ani-cli\
     nodejs\
     npm\
+    yarn\
     visual-studio-code-bin\
     chromium\
     --noconfirm
