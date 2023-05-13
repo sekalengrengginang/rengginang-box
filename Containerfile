@@ -40,9 +40,10 @@ RUN git config --global protocol.file.allow always && \
     ani-cli\
     nodejs\
     npm\
+    noto-fonts\
     yarn\
     visual-studio-code-bin\
-    chromium\
+    google-chrome-dev\
     --noconfirm
 
 USER root
