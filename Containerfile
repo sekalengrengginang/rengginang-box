@@ -10,6 +10,6 @@ COPY sigil_lib /
 # install package
 RUN apt-get update && \ 
     apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get -y install build-essentials cmake cmake-curses-gui libglew-dev libopenal-dev xterm codeblocks  
+    DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential cmake cmake-curses-gui libglew-dev libopenal-dev xterm codeblocks  
 
 RUN rm -rf /tmp/* 
