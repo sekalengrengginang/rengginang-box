@@ -13,5 +13,3 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install cmake cmake-curses-gui libglew-dev libopenal-dev xterm codeblocks  
 
 RUN rm -rf /tmp/* 
-
-RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
