@@ -1,4 +1,4 @@
-FROM docker.io/debian/debian:11
+FROM docker.io/debian:11
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
