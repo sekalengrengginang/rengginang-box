@@ -1,5 +1,5 @@
 # rengginang-box
-ArchLinux image for distrobox/toolbx with my customization 
+Debian for distrobox/toolbx with sigil development
 ## How to use
 Distrobox
 
